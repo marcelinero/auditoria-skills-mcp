@@ -1,3 +1,3 @@
-"""auditoria-skills-mcp — Servidor MCP para auditoría interna."""
+"""auditoria-skills-mcp — MCP server for internal audit SKILLs."""
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"

@@ -2,9 +2,9 @@
 
 > mcp-name: io.github.marcelinero/auditoria-skills
 
-Servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io) con **20 SKILLs de auditoría interna**, ancladas a normas globales (IIA, COSO, NIST, ISO, IFRS, COBIT, ACFE).
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io) server exposing **20 internal-audit SKILLs** grounded in globally accepted standards (IIA, COSO, NIST, ISO, IFRS, COBIT, ACFE). SKILLs are written in Spanish — the working language of the target audience.
 
-Instalable en un solo comando — sin clonar repositorios ni gestionar rutas.
+Zero-install — one command, no repo cloning, no path configuration.
 
 [![PyPI](https://img.shields.io/pypi/v/auditoria-skills-mcp.svg)](https://pypi.org/project/auditoria-skills-mcp/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://github.com/marcelinero/auditoria-skills/blob/main/LICENSE)
@@ -12,11 +12,11 @@ Instalable en un solo comando — sin clonar repositorios ni gestionar rutas.
 
 ---
 
-## Instalación rápida
+## Quickstart
 
 ### Claude Desktop
 
-Agregá esto a `claude_desktop_config.json`:
+Add to `claude_desktop_config.json`:
 
 - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 - **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
@@ -32,7 +32,7 @@ Agregá esto a `claude_desktop_config.json`:
 }
 ```
 
-Reiniciá Claude Desktop. Sin clonar repos, sin rutas absolutas.
+Restart Claude Desktop. No repo cloning, no absolute paths.
 
 ### Claude Code (CLI)
 
@@ -40,7 +40,7 @@ Reiniciá Claude Desktop. Sin clonar repos, sin rutas absolutas.
 claude mcp add auditoria-skills -- uvx auditoria-skills-mcp
 ```
 
-### Requisito: `uv`
+### Prerequisite: `uv`
 
 ```bash
 # macOS / Linux
@@ -52,21 +52,21 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 ---
 
-## Herramientas disponibles
+## Available tools
 
-| Herramienta | Descripción |
+| Tool | Description |
 | --- | --- |
-| `listar_skills` | Lista las 20 SKILLs con tipo, categoría y marcos normativos |
-| `obtener_skill` | Carga el contenido completo de una SKILL por nombre |
-| `buscar_skills` | Filtra por tipo (`proceso`/`especialidad`) y/o marco (ISO, NIST, IIA…) |
+| `list_skills` | List all 20 SKILLs with type, category, and anchor standards |
+| `get_skill` | Load the full content of a SKILL by name |
+| `search_skills` | Filter by type (`proceso`/`especialidad`) and/or framework (ISO, NIST, IIA…) |
 
 ---
 
-## SKILLs incluidas
+## Included SKILLs
 
-### Procesos transversales (8)
+### Process SKILLs — cross-cutting (8)
 
-| SKILL | Estándares ancla |
+| SKILL | Anchor standards |
 | --- | --- |
 | `planeacion-basada-riesgos` | IIA, COSO ERM, ISO 31000 |
 | `evaluacion-controles` | COSO IC-IF, IIA, SOX 404 |
@@ -77,9 +77,9 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 | `aseguramiento-calidad` | IIA, IIA QA Manual |
 | `analitica-datos` | GTAG 16, ISACA |
 
-### Especialidades (12)
+### Specialty SKILLs — by domain (12)
 
-| SKILL | Estándares ancla |
+| SKILL | Anchor standards |
 | --- | --- |
 | `auditoria-financiera` | NIA/ISA, NIIF/IFRS, SOX, COSO IC-IF |
 | `auditoria-operativa` | IIA, ISO 9001, INTOSAI |
@@ -96,33 +96,39 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 ---
 
-## Ejemplos de uso
+## Usage examples
 
 ```text
-Cargá la SKILL auditoria-ciberseguridad y ayudame a planear
-una auditoría basada en NIST CSF 2.0.
+Load the auditoria-ciberseguridad SKILL and help me plan
+an audit based on NIST CSF 2.0.
 ```
 
 ```text
-¿Qué SKILLs del catálogo aplican a normas ISO?
+Which SKILLs in the catalog apply to ISO standards?
 ```
 
 ```text
-Voy a hacer una auditoría de cumplimiento de ISO 37301.
-Cargá las SKILLs relevantes y construí el plan de engagement.
+I'm doing a compliance audit for ISO 37301.
+Load the relevant SKILLs and build the engagement plan.
 ```
 
 ---
 
-## Repositorio de contenido
+## Content repository
 
-Las SKILLs viven en el repositorio principal:
+SKILLs live in the main repository:
 **[github.com/marcelinero/auditoria-skills](https://github.com/marcelinero/auditoria-skills)**
 
-Contribuciones, nuevas SKILLs e issues → ese repositorio.
+Contributions, new SKILLs, and issues → that repository.
 
 ---
 
-## Licencia
+## Acerca de / About
+
+> **Español:** Servidor MCP con 20 SKILLs de auditoría interna redactadas en español neutro, ancladas a normas globales (IIA, COSO, NIST, ISO, IFRS, COBIT, ACFE). Cubre procesos transversales (planeación, muestreo, papeles de trabajo) y especialidades (financiera, TI, forense, ESG, ciberseguridad, IA y más).
+
+---
+
+## License
 
 [CC BY-SA 4.0](https://github.com/marcelinero/auditoria-skills/blob/main/LICENSE)
