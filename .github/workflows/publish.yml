@@ -74,7 +74,8 @@ jobs:
         working-directory: .
 
       - name: Publicar en PyPI
-        run: uv publish --check-url https://pypi.org/simple/auditoria-skills-mcp/
+        continue-on-error: true
+        run: uv publish
         env:
           UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
 
