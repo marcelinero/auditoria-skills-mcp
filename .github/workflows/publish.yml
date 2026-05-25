@@ -74,7 +74,7 @@ jobs:
         working-directory: .
 
       - name: Publicar en PyPI
-        run: uv publish
+        run: uv publish --skip-existing
         env:
           UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
 
@@ -88,7 +88,8 @@ jobs:
           chmod +x mcp-publisher
           sudo mv mcp-publisher /usr/local/bin/
 
+      - name: Autenticar en MCP Registry (GitHub OIDC)
+        run: mcp-publisher login github-oidc
+
       - name: Publicar en MCP Registry
         run: mcp-publisher publish
-        env:
-          MCP_REGISTRY_TOKEN: ${{ secrets.MCP_REGISTRY_TOKEN }}
