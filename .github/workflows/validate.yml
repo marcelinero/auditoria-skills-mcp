@@ -1,0 +1,71 @@
+name: Validar paquete
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validar catalog.json y SKILLs
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verificar que catalog.json es JSON válido
+        run: python -c "import json; json.load(open('auditoria_skills_mcp/data/catalog.json'))"
+
+      - name: Verificar que todos los paths del catálogo existen
+        run: |
+          python - <<'EOF'
+          import json, sys
+          from pathlib import Path
+
+          base = Path("auditoria_skills_mcp/data")
+          catalog = json.load(open(base / "catalog.json"))
+          missing = []
+
+          for skill in catalog["skills"]:
+              p = base / skill["path"]
+              if not p.exists():
+                  missing.append(f"  - {skill['name']}: {skill['path']}")
+
+          if missing:
+              print("SKILLs con paths faltantes:")
+              print("\n".join(missing))
+              sys.exit(1)
+          else:
+              print(f"OK — {len(catalog['skills'])} SKILLs verificadas.")
+          EOF
+
+      - name: Verificar que la versión del paquete coincide con server.json
+        run: |
+          python - <<'EOF'
+          import json, sys, tomllib
+
+          with open("pyproject.toml", "rb") as f:
+              pkg_version = tomllib.load(f)["project"]["version"]
+
+          server = json.load(open("server.json"))
+          srv_version = server["version"]
+          pkg_version_ref = server["packages"][0]["version"]
+
+          errors = []
+          if pkg_version != srv_version:
+              errors.append(f"pyproject.toml ({pkg_version}) != server.json version ({srv_version})")
+          if pkg_version != pkg_version_ref:
+              errors.append(f"pyproject.toml ({pkg_version}) != server.json packages[0].version ({pkg_version_ref})")
+
+          if errors:
+              print("Versiones inconsistentes:")
+              print("\n".join(errors))
+              sys.exit(1)
+          else:
+              print(f"OK — versión {pkg_version} consistente en todos los archivos.")
+          EOF

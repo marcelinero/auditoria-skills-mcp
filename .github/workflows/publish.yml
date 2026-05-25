@@ -1,0 +1,94 @@
+name: Publicar en PyPI y MCP Registry
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  sync-validate-publish:
+    name: Sincronizar SKILLs, validar y publicar
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: astral-sh/setup-uv@v5
+
+      # Sincroniza las SKILLs desde el repositorio principal
+      - name: Sincronizar SKILLs desde auditoria-skills
+        run: |
+          git clone --depth 1 https://github.com/marcelinero/auditoria-skills.git _source
+          cp _source/catalog.json auditoria_skills_mcp/data/
+          rm -rf auditoria_skills_mcp/data/skills
+          cp -r _source/skills auditoria_skills_mcp/data/
+          rm -rf _source
+          echo "SKILLs sincronizadas."
+
+      # Validaciones previas al build
+      - name: Validar catalog.json y SKILLs
+        run: |
+          python - <<'EOF'
+          import json, sys
+          from pathlib import Path
+
+          base = Path("auditoria_skills_mcp/data")
+          catalog = json.load(open(base / "catalog.json"))
+          missing = [s["name"] for s in catalog["skills"] if not (base / s["path"]).exists()]
+          if missing:
+              print("SKILLs faltantes:", missing)
+              sys.exit(1)
+          print(f"OK — {len(catalog['skills'])} SKILLs verificadas.")
+          EOF
+
+      - name: Validar versiones consistentes
+        run: |
+          python - <<'EOF'
+          import json, sys, tomllib
+
+          with open("pyproject.toml", "rb") as f:
+              pkg = tomllib.load(f)["project"]["version"]
+          srv = json.load(open("server.json"))
+          errors = []
+          if pkg != srv["version"]:
+              errors.append(f"pyproject ({pkg}) != server.json ({srv['version']})")
+          if pkg != srv["packages"][0]["version"]:
+              errors.append(f"pyproject ({pkg}) != server.json packages[0] ({srv['packages'][0]['version']})")
+          if errors:
+              [print(e) for e in errors]
+              sys.exit(1)
+          print(f"OK — versión {pkg}.")
+          EOF
+
+      # Build y publicar en PyPI
+      - name: Build
+        run: uv build
+        working-directory: .
+
+      - name: Publicar en PyPI
+        run: uv publish
+        env:
+          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
+
+      # Publicar en MCP Registry
+      - name: Instalar mcp-publisher
+        run: |
+          ARCH=$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')
+          OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_${OS}_${ARCH}.tar.gz" \
+            | tar xz mcp-publisher
+          chmod +x mcp-publisher
+          sudo mv mcp-publisher /usr/local/bin/
+
+      - name: Publicar en MCP Registry
+        run: mcp-publisher publish
+        env:
+          MCP_REGISTRY_TOKEN: ${{ secrets.MCP_REGISTRY_TOKEN }}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.marcelinero/auditoria-skills",
+  "description": "20 SKILLs de auditoría interna para agentes de IA, ancladas a normas globales (IIA, COSO, NIST, ISO, IFRS, COBIT, ACFE). Cubre procesos transversales y especialidades: financiera, TI, forense, cumplimiento, ESG, ciberseguridad, IA y más.",
+  "repository": {
+    "url": "https://github.com/marcelinero/auditoria-skills-mcp",
+    "source": "github"
+  },
+  "version": "2.0.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "auditoria-skills-mcp",
+      "version": "2.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

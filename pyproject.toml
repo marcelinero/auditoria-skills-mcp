@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "auditoria-skills-mcp"
+version = "2.0.0"
+description = "20 SKILLs de auditoría interna para agentes de IA — servidor MCP (IIA, COSO, NIST, ISO, IFRS)"
+readme = "README.md"
+license = { text = "CC-BY-SA-4.0" }
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.9.0"]
+keywords = ["mcp", "audit", "auditoria", "IIA", "COSO", "NIST", "ISO", "internal-audit"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: Other/Proprietary License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial",
+]
+
+[project.urls]
+Homepage     = "https://github.com/marcelinero/auditoria-skills"
+Repository   = "https://github.com/marcelinero/auditoria-skills-mcp"
+"Bug Tracker" = "https://github.com/marcelinero/auditoria-skills/issues"
+Changelog    = "https://github.com/marcelinero/auditoria-skills/blob/main/CHANGELOG.md"
+
+[project.scripts]
+auditoria-skills-mcp = "auditoria_skills_mcp.server:main_sync"
+
+[tool.hatch.build.targets.wheel]
+packages = ["auditoria_skills_mcp"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"auditoria_skills_mcp/data" = "auditoria_skills_mcp/data"

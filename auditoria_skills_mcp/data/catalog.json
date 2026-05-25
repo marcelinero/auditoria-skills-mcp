@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "auditoria-skills",
+  "version": "1.0.0",
+  "description": "Catálogo de SKILLs para auditores con IA — procesos transversales y especialidades, anclados a marcos normativos globales.",
+  "license": "CC-BY-SA-4.0",
+  "language": "es",
+  "skills": [
+    {
+      "name": "planeacion-basada-riesgos",
+      "type": "proceso",
+      "category": "planeacion",
+      "path": "skills/procesos/planeacion-basada-riesgos/SKILL.md",
+      "frameworks": ["IIA Global Internal Audit Standards 2025", "COSO ERM 2017", "ISO 31000"]
+    },
+    {
+      "name": "evaluacion-controles",
+      "type": "proceso",
+      "category": "ejecucion",
+      "path": "skills/procesos/evaluacion-controles/SKILL.md",
+      "frameworks": ["COSO IC-IF 2013", "IIA Three Lines Model 2020", "SOX 404", "PCAOB AS 2201"]
+    },
+    {
+      "name": "muestreo",
+      "type": "proceso",
+      "category": "ejecucion",
+      "path": "skills/procesos/muestreo/SKILL.md",
+      "frameworks": ["NIA/ISA 530", "AICPA Audit Sampling Guide"]
+    },
+    {
+      "name": "papeles-trabajo",
+      "type": "proceso",
+      "category": "documentacion",
+      "path": "skills/procesos/papeles-trabajo/SKILL.md",
+      "frameworks": ["NIA/ISA 230", "IIA Global Internal Audit Standards 2025"]
+    },
+    {
+      "name": "comunicacion-hallazgos",
+      "type": "proceso",
+      "category": "comunicacion",
+      "path": "skills/procesos/comunicacion-hallazgos/SKILL.md",
+      "frameworks": ["IIA Global Internal Audit Standards 2025 (Domain V)"]
+    },
+    {
+      "name": "seguimiento-recomendaciones",
+      "type": "proceso",
+      "category": "post-informe",
+      "path": "skills/procesos/seguimiento-recomendaciones/SKILL.md",
+      "frameworks": ["IIA Global Internal Audit Standards 2025 (Domain V)"]
+    },
+    {
+      "name": "aseguramiento-calidad",
+      "type": "proceso",
+      "category": "calidad-funcion",
+      "path": "skills/procesos/aseguramiento-calidad/SKILL.md",
+      "frameworks": ["IIA Global Internal Audit Standards 2025 (Domain II)", "IIA Quality Assessment Manual"]
+    },
+    {
+      "name": "analitica-datos",
+      "type": "proceso",
+      "category": "ejecucion",
+      "path": "skills/procesos/analitica-datos/SKILL.md",
+      "frameworks": ["GTAG 16", "ISACA Data Analytics for Auditors"]
+    },
+    {
+      "name": "auditoria-financiera",
+      "type": "especialidad",
+      "domain": "informacion-financiera",
+      "path": "skills/especialidades/financiera/SKILL.md",
+      "frameworks": ["NIA/ISA (IAASB)", "NIIF/IFRS", "US GAAP", "PCAOB", "SOX 302/404", "COSO IC-IF"]
+    },
+    {
+      "name": "auditoria-operativa",
+      "type": "especialidad",
+      "domain": "procesos-eficiencia",
+      "path": "skills/especialidades/operativa/SKILL.md",
+      "frameworks": ["IIA Standards", "ISO 9001", "INTOSAI ISSAI 3000"]
+    },
+    {
+      "name": "auditoria-tecnologia-informacion",
+      "type": "especialidad",
+      "domain": "ti-itgcs",
+      "path": "skills/especialidades/tecnologia-informacion/SKILL.md",
+      "frameworks": ["COBIT 2019", "ITAF (ISACA)", "GTAGs (IIA)", "ISO/IEC 27001"]
+    },
+    {
+      "name": "auditoria-forense",
+      "type": "especialidad",
+      "domain": "fraude-investigacion",
+      "path": "skills/especialidades/forense/SKILL.md",
+      "frameworks": ["ACFE Fraud Examiners Manual", "NIA 240", "FATF Recommendations"]
+    },
+    {
+      "name": "auditoria-cumplimiento",
+      "type": "especialidad",
+      "domain": "cumplimiento-regulatorio",
+      "path": "skills/especialidades/cumplimiento/SKILL.md",
+      "frameworks": ["ISO 37301", "ISO 37001", "OECD Anti-Bribery Convention"]
+    },
+    {
+      "name": "auditoria-esg-sostenibilidad",
+      "type": "especialidad",
+      "domain": "esg-sostenibilidad",
+      "path": "skills/especialidades/esg-sostenibilidad/SKILL.md",
+      "frameworks": ["ISSB IFRS S1/S2", "GRI Standards", "TCFD", "SASB", "CSRD/ESRS"]
+    },
+    {
+      "name": "auditoria-ciberseguridad",
+      "type": "especialidad",
+      "domain": "ciberseguridad",
+      "path": "skills/especialidades/ciberseguridad/SKILL.md",
+      "frameworks": ["NIST CSF 2.0", "ISO/IEC 27001", "ISO/IEC 27002", "CIS Controls v8"]
+    },
+    {
+      "name": "auditoria-inteligencia-artificial",
+      "type": "especialidad",
+      "domain": "ia-modelos",
+      "path": "skills/especialidades/inteligencia-artificial/SKILL.md",
+      "frameworks": ["ISO/IEC 42001", "NIST AI RMF", "EU AI Act"]
+    },
+    {
+      "name": "auditoria-calidad",
+      "type": "especialidad",
+      "domain": "calidad",
+      "path": "skills/especialidades/calidad/SKILL.md",
+      "frameworks": ["ISO 9001", "ISO 9004", "ISO 19011"]
+    },
+    {
+      "name": "auditoria-ambiental",
+      "type": "especialidad",
+      "domain": "ambiental",
+      "path": "skills/especialidades/ambiental/SKILL.md",
+      "frameworks": ["ISO 14001", "ISO 14064", "GHG Protocol", "ISO 19011"]
+    },
+    {
+      "name": "auditoria-gestion-desempeno",
+      "type": "especialidad",
+      "domain": "desempeno-gobierno",
+      "path": "skills/especialidades/gestion-desempeno/SKILL.md",
+      "frameworks": ["IIA Standards", "INTOSAI ISSAI 3000", "COSO ERM 2017", "ISO 37000"]
+    },
+    {
+      "name": "auditoria-continua",
+      "type": "especialidad",
+      "domain": "auditoria-continua",
+      "path": "skills/especialidades/continua/SKILL.md",
+      "frameworks": ["GTAG 3 (IIA)", "AICPA Continuous Monitoring", "ISACA"]
+    }
+  ]
+}
