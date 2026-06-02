@@ -25,8 +25,8 @@ classifiers = [
 [project.urls]
 Homepage     = "https://github.com/marcelinero/auditoria-skills"
 Repository   = "https://github.com/marcelinero/auditoria-skills-mcp"
-"Bug Tracker" = "https://github.com/marcelinero/auditoria-skills/issues"
-Changelog    = "https://github.com/marcelinero/auditoria-skills/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/marcelinero/auditoria-skills-mcp/issues"
+Changelog    = "https://github.com/marcelinero/auditoria-skills-mcp/blob/main/CHANGELOG.md"
 
 [project.scripts]
 auditoria-skills-mcp = "auditoria_skills_mcp.server:main_sync"

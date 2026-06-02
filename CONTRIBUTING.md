@@ -145,7 +145,7 @@ Pasos, entregables, best practices.
 ## Versionado
 
 - **Version canónica** → `pyproject.toml` y `server.json`.
-- **Changelog**: registra qué SKILL cambió en cada versión (si aplica).
+- **Changelog**: registra qué SKILL cambió en cada versión — ver [CHANGELOG.md](CHANGELOG.md).
 - **Tags Git**: marcas por versión (v2.1.0, v2.2.0, etc.).
 
 Cuando un PR se aprueba, la versión se incrementa antes de publicar en PyPI.

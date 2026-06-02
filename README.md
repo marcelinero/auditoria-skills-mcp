@@ -177,7 +177,7 @@ Load the relevant SKILLs and build the engagement plan.
 SKILLs live in the main repository:
 **[github.com/marcelinero/auditoria-skills](https://github.com/marcelinero/auditoria-skills)**
 
-Contributions, new SKILLs, and issues → that repository.
+Issues and contributions (new SKILLs, framework updates) → [this repository](https://github.com/marcelinero/auditoria-skills-mcp/issues/new/choose).
 
 ---
 
