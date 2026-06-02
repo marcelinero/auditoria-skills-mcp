@@ -1,0 +1,54 @@
+name: Propuesta de nuevo SKILL
+description: Propón un SKILL para una especialidad de auditoría no cubierta, anclado en un estándar global.
+title: "[Nuevo SKILL] <nombre-propuesto>"
+labels: ["nuevo-skill", "pendiente-revision"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de proponer, verifica que el SKILL no exista ya en el [catálogo actual](https://github.com/marcelinero/auditoria-skills-mcp#included-skills). Los nuevos SKILLs deben estar anclados en un estándar globalmente reconocido.
+
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre propuesto
+      description: En formato kebab-case, con prefijo "auditoria-" si es una especialidad.
+      placeholder: "auditoria-privacidad-datos"
+    validations:
+      required: true
+
+  - type: input
+    id: estandar
+    attributes:
+      label: Marco o estándar de referencia
+      description: Estándar global que justifica el SKILL (ISO, IIA, NIST, ACFE, INTOSAI, etc.).
+      placeholder: "ISO 27701:2019 — Gestión de información de privacidad"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposito
+    attributes:
+      label: Propósito del SKILL
+      description: ¿Qué evalúa? ¿En qué contexto lo usaría un auditor?
+      placeholder: "Evalúa si la organización gestiona datos personales conforme a GDPR/ISO 27701. Útil en auditorías de cumplimiento normativo en entidades con operaciones en Europa o que procesan datos de ciudadanos europeos."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alcance
+    attributes:
+      label: ¿Por qué es genérico?
+      description: Explica por qué este SKILL sería útil para múltiples auditores, no solo para tu contexto.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmacion
+    attributes:
+      label: Confirmación
+      options:
+        - label: El SKILL no existe ya en el catálogo actual.
+          required: true
+        - label: El estándar citado es globalmente reconocido (no es normativa local de un solo país).
+          required: true

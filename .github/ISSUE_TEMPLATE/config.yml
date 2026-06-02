@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Proponer mejora vía Pull Request
+    url: https://github.com/marcelinero/auditoria-skills-mcp/blob/main/CONTRIBUTING.md
+    about: Si ya tienes la mejora implementada, abre un PR siguiendo las instrucciones del CONTRIBUTING.

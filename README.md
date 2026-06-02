@@ -52,6 +52,64 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 ---
 
+## Mantener actualizado
+
+`uvx` resuelve la versión en cada ejecución desde PyPI. Para forzar la última versión publicada:
+
+```bash
+# Forzar última versión (recomendado tras una actualización de marcos)
+uvx auditoria-skills-mcp@latest
+
+# Verificar la versión instalada en caché
+uvx auditoria-skills-mcp --version
+```
+
+Cuando un marco de referencia se revisa (COSO, NIST, IIA, ISO…), se publica una nueva versión en PyPI y queda registrada en el [CHANGELOG](CHANGELOG.md). Si detectas que un estándar fue actualizado y el SKILL no lo refleja, [abre un issue](https://github.com/marcelinero/auditoria-skills-mcp/issues/new/choose) — no hace falta escribir código.
+
+---
+
+## Personalizar para tu entidad
+
+Los SKILLs son **Markdown + YAML** — editables, versionables, y reutilizables.
+
+### Opción 1: Adaptar localmente (sin PRs)
+
+```bash
+# Clona el repo
+git clone https://github.com/marcelinero/auditoria-skills-mcp.git
+cd auditoria-skills-mcp
+
+# Edita los SKILLs en ./auditoria_skills_mcp/data/skills/
+# Ejemplo: ajusta matriz de controles en auditoria_skills_mcp/data/skills/procesos/evaluacion-controles/SKILL.md
+
+# Ejecuta localmente
+uv run python -m auditoria_skills_mcp
+```
+
+Esta es **tu copia adaptada** a tu contexto (matriz interna, normativa local, procedimientos propios). No requiere aprobación ni PRs.
+
+### Opción 2: Proponer mejoras genéricas (con PRs)
+
+Si mejoras algo reutilizable para otros auditores, abre un Pull Request:
+
+- Claridad o completitud de un SKILL.
+- Actualización por cambio en estándar (COSO 2023, NIST 2.0, ISO nuevo).
+- Nuevo SKILL alineado con un estándar global.
+
+Ver [CONTRIBUTING.md](CONTRIBUTING.md) para detalles.
+
+---
+
+## Ciclo de vida de los SKILLs
+
+| Nivel | Qué es | Quién | Control |
+|-------|--------|-------|---------|
+| **Canónico** | Versión oficial en PyPI | Mantendedor | Centralizado, sigue estándares globales |
+| **Local** | Adaptado a tu entidad | Tú | Descentralizado, sin tocar lo común |
+| **Comunitario** | Mejoras genéricas aceptadas | PR + revisión | Se fusionan a `main` si pasan criterios |
+
+---
+
 ## Available tools
 
 | Tool | Description |

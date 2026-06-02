@@ -1,0 +1,85 @@
+name: Actualización de marco de referencia
+description: Reporta que un estándar (COSO, NIST, IIA, ISO, etc.) fue revisado y un SKILL necesita actualizarse.
+title: "[Marco] <nombre del estándar> — <versión o año>"
+labels: ["marco-actualizado", "pendiente-revision"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Usa este formulario cuando un marco de referencia oficial haya publicado una nueva versión y el SKILL correspondiente deba actualizarse. No es necesario hacer un PR — con reportarlo ya ayudas.
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: SKILL afectado
+      description: ¿Qué SKILL necesita actualización?
+      options:
+        - planeacion-basada-riesgos
+        - evaluacion-controles
+        - muestreo
+        - papeles-trabajo
+        - comunicacion-hallazgos
+        - seguimiento-recomendaciones
+        - aseguramiento-calidad
+        - analitica-datos
+        - auditoria-financiera
+        - auditoria-operativa
+        - auditoria-tecnologia-informacion
+        - auditoria-forense
+        - auditoria-cumplimiento
+        - auditoria-esg-sostenibilidad
+        - auditoria-ciberseguridad
+        - auditoria-inteligencia-artificial
+        - auditoria-calidad
+        - auditoria-ambiental
+        - auditoria-gestion-desempeno
+        - auditoria-continua
+        - Más de uno / No estoy seguro
+    validations:
+      required: true
+
+  - type: input
+    id: marco
+    attributes:
+      label: Marco o estándar actualizado
+      description: Nombre y versión del documento oficial (ej. "NIST CSF 2.0", "COSO ERM 2023", "ISO 27001:2022").
+      placeholder: "NIST CSF 2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: fuente
+    attributes:
+      label: Fuente oficial
+      description: URL o referencia al documento oficial publicado.
+      placeholder: "https://www.nist.gov/cyberframework"
+    validations:
+      required: false
+
+  - type: textarea
+    id: cambios
+    attributes:
+      label: ¿Qué cambió?
+      description: Describe brevemente los cambios relevantes para auditoría interna. No es necesario ser exhaustivo.
+      placeholder: |
+        - Se añadió la función "Govern" como nueva categoría central.
+        - Se amplió el scope a cadenas de suministro.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto esperado en el SKILL
+      description: ¿Qué sección o procedimiento del SKILL debería cambiar? (opcional, si lo sabes)
+      placeholder: "La sección de 'Marco de referencia' debe citar CSF 2.0 en lugar de 1.1. El procedimiento de evaluación de riesgos debería incorporar la función Govern."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmacion
+    attributes:
+      label: Confirmación
+      options:
+        - label: Verifiqué que el estándar fue publicado oficialmente (no es un borrador).
+          required: true
