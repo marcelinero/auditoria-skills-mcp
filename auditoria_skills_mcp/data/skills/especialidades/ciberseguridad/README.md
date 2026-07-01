@@ -11,7 +11,7 @@ Cuando el usuario menciona: ciberseguridad, cybersecurity audit, NIST CSF, ISO 2
 ## Marcos de referencia anclados
 
 - NIST Cybersecurity Framework 2.0
-- ISO/IEC 27001 · 27002 · CIS Controls v8
+- ISO/IEC 27001:2022 · 27002:2022 · CIS Controls v8.1
 
 ## Se combina típicamente con
 

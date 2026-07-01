@@ -141,11 +141,11 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para detalles.
 | --- | --- |
 | `auditoria-financiera` | NIA/ISA, NIIF/IFRS, SOX, COSO IC-IF |
 | `auditoria-operativa` | IIA, ISO 9001, INTOSAI |
-| `auditoria-tecnologia-informacion` | COBIT 2019, ITAF, ISO 27001 |
+| `auditoria-tecnologia-informacion` | COBIT 2019, ITAF, ISO 27001:2022 |
 | `auditoria-forense` | ACFE, NIA 240, FATF |
-| `auditoria-cumplimiento` | ISO 37301, ISO 37001 |
-| `auditoria-esg-sostenibilidad` | ISSB IFRS S1/S2, GRI, TCFD, SASB |
-| `auditoria-ciberseguridad` | NIST CSF 2.0, ISO 27001/27002, CIS |
+| `auditoria-cumplimiento` | ISO 37301, ISO 37001:2025 |
+| `auditoria-esg-sostenibilidad` | ISSB IFRS S1/S2, GRI, TCFD, SASB, CSRD/ESRS (post-Ómnibus) |
+| `auditoria-ciberseguridad` | NIST CSF 2.0, ISO 27001/27002:2022, CIS v8.1 |
 | `auditoria-inteligencia-artificial` | ISO/IEC 42001, NIST AI RMF, EU AI Act |
 | `auditoria-calidad` | ISO 9001, ISO 19011 |
 | `auditoria-ambiental` | ISO 14001, ISO 14064, GHG Protocol |

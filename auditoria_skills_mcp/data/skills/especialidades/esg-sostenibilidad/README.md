@@ -11,7 +11,7 @@ Cuando el usuario menciona: auditoría ESG, sustainability audit, reporte de sos
 ## Marcos de referencia anclados
 
 - ISSB (IFRS S1 y S2) · GRI Standards
-- TCFD · SASB · CSRD/ESRS
+- TCFD (incorporada en ISSB) · SASB (mantenido por ISSB) · CSRD/ESRS (alcance y calendario reducidos por el Ómnibus I, 2025)
 
 ## Se combina típicamente con
 

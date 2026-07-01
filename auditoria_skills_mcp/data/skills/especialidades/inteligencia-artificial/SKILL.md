@@ -23,7 +23,7 @@ Es una especialidad emergente con marco regulatorio (EU AI Act) y estándares de
 
 - **ISO/IEC 42001:2023** — Sistemas de gestión de IA (AIMS).
 - **NIST AI Risk Management Framework (AI RMF 1.0)** — funciones Govern, Map, Measure, Manage.
-- **EU AI Act** — clasificación por riesgo (inaceptable, alto, limitado, mínimo) y obligaciones.
+- **EU AI Act** — clasificación por riesgo (inaceptable, alto, limitado, mínimo) y obligaciones. Entró en vigor el 1 de agosto de 2024, con aplicación escalonada: prohibiciones y obligaciones de alfabetización en IA desde el 2 de febrero de 2025; gobernanza y obligaciones para modelos de propósito general (GPAI) desde el 2 de agosto de 2025 (modelos anteriores a esa fecha tienen plazo hasta agosto de 2027 para cumplir). Bajo el "Digital Omnibus" (acuerdo provisional de mayo de 2026), el plazo para sistemas de alto riesgo del Anexo III se aplazó del 2 de agosto de 2026 al 2 de diciembre de 2027 — validar el calendario vigente al momento de la auditoría, ya que sigue en evolución.
 - **ISO/IEC 23894** — Guía de gestión del riesgo de IA.
 - **ISO/IEC 23053** — Marco para sistemas de IA con ML.
 - **ISO/IEC TR 24028** — Confianza en IA.

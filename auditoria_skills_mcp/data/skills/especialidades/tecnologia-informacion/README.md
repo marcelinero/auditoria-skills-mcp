@@ -11,7 +11,7 @@ Cuando el usuario menciona: auditoría de TI, IT audit, ITGC, COBIT, gobierno de
 ## Marcos de referencia anclados
 
 - COBIT 2019 · ITAF (ISACA)
-- GTAGs (IIA) · ISO/IEC 27001
+- GTAGs (IIA, serie renovada 2024-2025) · ISO/IEC 27001:2022
 
 ## Se combina típicamente con
 

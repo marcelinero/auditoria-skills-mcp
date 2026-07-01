@@ -10,7 +10,7 @@ Cuando el usuario menciona: auditoría de cumplimiento, compliance audit, regula
 
 ## Marcos de referencia anclados
 
-- ISO 37301 (compliance) · ISO 37001 (antisoborno)
+- ISO 37301 (compliance) · ISO 37001:2025 (antisoborno)
 - OCDE — Convención Anticohecho · marcos sectoriales
 
 ## Se combina típicamente con

@@ -19,7 +19,7 @@ La auditoría de calidad evalúa el sistema de gestión de calidad (SGC) — los
 
 ## Marco de referencia
 
-- **ISO 9001:2015** — Sistemas de gestión de la calidad — Requisitos.
+- **ISO 9001:2015** — Sistemas de gestión de la calidad — Requisitos. **Próxima revisión**: ISO 9001:2026 se encuentra en etapa de votación final (FDIS) tras el DIS de agosto de 2025, con publicación esperada en septiembre de 2026 y periodo de transición de 3 años. Incorporará cambio climático en el contexto de la organización (cláusula 4.1) y cultura de calidad/comportamiento ético (cláusula 5.1.1). Validar la versión vigente al momento de auditar.
 - **ISO 9004:2018** — Gestión para el éxito sostenido — Enfoque de gestión de la calidad.
 - **ISO 19011:2018** — Directrices para la auditoría de sistemas de gestión.
 - **ISO 9000:2015** — Fundamentos y vocabulario.

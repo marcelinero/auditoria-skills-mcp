@@ -23,7 +23,7 @@ A diferencia de la auditoría operativa o financiera, su criterio principal es *
 
 ### Estándares de gestión de cumplimiento
 - **ISO 37301** — Sistemas de gestión de cumplimiento (CMS).
-- **ISO 37001** — Sistemas de gestión antisoborno (ABMS).
+- **ISO 37001:2025** — Sistemas de gestión antisoborno (ABMS). Reemplaza la versión 2016 (que incluía la Enmienda 1:2024 sobre acción climática); incorpora nuevas subcláusulas sobre cambio climático y conflictos de interés, y renombra la "función de cumplimiento antisoborno" a "función antisoborno" con independencia operativa más clara. Periodo de transición para certificaciones existentes hasta el 28 de febrero de 2027.
 - **ISO 31022** — Riesgos legales.
 - **OCDE Good Practice Guidance on Internal Controls, Ethics and Compliance**.
 - **U.S. DOJ Evaluation of Corporate Compliance Programs** — referencia global.

@@ -20,17 +20,17 @@ La auditoría de ciberseguridad evalúa si la organización entiende, gestiona y
 ## Marco de referencia
 
 - **NIST Cybersecurity Framework 2.0** — funciones: Govern, Identify, Protect, Detect, Respond, Recover.
-- **ISO/IEC 27001** — Sistema de gestión de seguridad de la información (SGSI).
-- **ISO/IEC 27002** — Código de práctica para controles de seguridad.
+- **ISO/IEC 27001:2022** — Sistema de gestión de seguridad de la información (SGSI). La versión 2013 quedó obsoleta tras el periodo de transición (venció en octubre de 2025); certificaciones vigentes deben ser contra la versión 2022.
+- **ISO/IEC 27002:2022** — Código de práctica para controles de seguridad.
 - **ISO/IEC 27005** — Gestión de riesgos de seguridad de la información.
 - **ISO/IEC 27017 / 27018** — Seguridad y privacidad en nube.
 - **ISO/IEC 27035** — Gestión de incidentes.
-- **CIS Critical Security Controls v8** — 18 controles priorizados.
+- **CIS Critical Security Controls v8.1** — 18 controles priorizados; la v8.1 (junio 2024) añade la función "Govern" alineada con NIST CSF 2.0 y refuerza guías de seguridad en la nube.
 - **MITRE ATT&CK** — taxonomía de tácticas, técnicas y procedimientos de adversarios.
 - **NIST SP 800-53** — controles para sistemas federales (referencia global).
 - **NIST SP 800-61** — guía de manejo de incidentes.
 - **NIS 2 Directive** (UE) — ciberseguridad de entidades esenciales e importantes.
-- **PCI-DSS v4** — pagos.
+- **PCI-DSS v4.0.1** — pagos; los requisitos que antes eran "best practice" son obligatorios desde el 31 de marzo de 2025.
 - **CSA Cloud Controls Matrix**.
 - **OWASP Top 10** — riesgos de aplicaciones web.
 

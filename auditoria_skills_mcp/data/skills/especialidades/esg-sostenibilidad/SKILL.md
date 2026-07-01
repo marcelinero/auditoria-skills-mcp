@@ -23,9 +23,9 @@ La auditoría ESG evalúa la confiabilidad de las divulgaciones de sostenibilida
 - **ISSB — IFRS S1** (Requerimientos generales para divulgaciones de información financiera relacionada con la sostenibilidad).
 - **ISSB — IFRS S2** (Divulgaciones relacionadas con el clima).
 - **GRI Standards** — universales, sectoriales y temáticos.
-- **TCFD** — Task Force on Climate-related Financial Disclosures (incorporada en ISSB).
-- **SASB Standards** — sectoriales (incorporados en ISSB).
-- **CSRD / ESRS** — Corporate Sustainability Reporting Directive y European Sustainability Reporting Standards (UE).
+- **TCFD** — el Task Force se disolvió en octubre de 2023; su monitoreo pasó al IFRS Foundation desde 2024 y sus recomendaciones quedaron plenamente incorporadas en IFRS S1/S2. Ya no existe como organismo activo, pero algunas jurisdicciones y contratos aún exigen reportar "conforme a TCFD".
+- **SASB Standards** — mantenidos y actualizados por el ISSB desde la consolidación del Value Reporting Foundation (2022); el ISSB ha venido revisando estándares sectoriales por industria (p. ej. extractivas, alimentos procesados, utilities) — validar la versión vigente por sector al momento de la auditoría.
+- **CSRD / ESRS** — Corporate Sustainability Reporting Directive y European Sustainability Reporting Standards (UE). **Actualización relevante (Paquete Ómnibus I, 2025)**: la Directiva "Stop-the-Clock" (abril 2025) postergó dos años la entrada en vigor para empresas de las olas 2 y 3; el Ómnibus (acordado en diciembre de 2025) redujo el alcance obligatorio a entidades de la UE con más de 1.000 empleados y más de €450M de facturación neta. EFRAG publicó en julio de 2025 los borradores de ESRS simplificados; se espera que la Comisión adopte el acto delegado con las normas revisadas a mediados de 2026, aplicables desde el año fiscal 2027. Validar siempre el alcance y calendario vigente para la jurisdicción y tamaño de la entidad auditada.
 - **CDP** — Carbon Disclosure Project (cuestionarios sobre clima, agua, bosques).
 
 ### Estándares de aseguramiento
@@ -34,7 +34,7 @@ La auditoría ESG evalúa la confiabilidad de las divulgaciones de sostenibilida
 - **AA1000AS** (AccountAbility) — aseguramiento de sostenibilidad.
 
 ### Estándares técnicos
-- **GHG Protocol** — Corporate Standard, Scope 2 Guidance, Scope 3 Standard.
+- **GHG Protocol** — Corporate Standard, Scope 2 Guidance, Scope 3 Standard. Los tres están en revisión (consultas públicas 2025-2026); las versiones actuales siguen vigentes y las nuevas ediciones no se esperan publicadas antes de 2027 — monitorear cambios pero auditar contra la versión vigente al momento del trabajo.
 - **ISO 14064-1, -2, -3** — Cuantificación, proyectos y verificación de GEI.
 - **ISO 14001** — Sistemas de gestión ambiental.
 - **ISO 26000** — Responsabilidad social (guía, no certificable).

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "auditoria-skills-mcp"
-version = "2.1.0"
+version = "2.2.0"
 description = "MCP server with 20 internal-audit SKILLs grounded in global standards (IIA, COSO, NIST, ISO, IFRS)"
 readme = "README.md"
 license = { text = "CC-BY-SA-4.0" }

@@ -21,12 +21,13 @@ La auditoría de TI evalúa el gobierno y los controles sobre la infraestructura
 
 - **COBIT 2019** (ISACA) — gobierno y gestión de TI empresarial.
 - **ITAF — Information Technology Assurance Framework** (ISACA).
-- **GTAGs — Global Technology Audit Guides** (IIA): especialmente
-  - GTAG 1: Information Technology Risk and Controls
-  - GTAG 8: Auditing Application Controls
-  - GTAG 14: Auditing User-Developed Applications
-  - GTAG sobre nube, ciberseguridad, identidad
-- **ISO/IEC 27001 e ISO/IEC 27002** — gestión de seguridad de la información (ver también SKILL `auditoria-ciberseguridad`).
+- **GTAGs — Global Technology Audit Guides** (IIA): el IIA retiró la numeración clásica (GTAG 1, 8, 14, etc.) y viene reemplazando la serie con guías temáticas alineadas a las Normas Globales 2024, entre ellas:
+  - "Auditing IT Governance and IT Management" (3ª edición, 2025) — reemplaza las antiguas GTAG 1 y "Management of IT Auditing".
+  - "Auditing Business Applications" (2025) — sucesora conceptual de la antigua GTAG 8.
+  - "Auditing Identity and Access Management" (2ª edición, 2024).
+  - "Understanding and Auditing Big Data" (2025).
+  - Guías sobre nube, ciberseguridad y aplicaciones desarrolladas por el usuario. Validar en el sitio del IIA cuál es la edición vigente, ya que se siguen actualizando.
+- **ISO/IEC 27001:2022 e ISO/IEC 27002:2022** — gestión de seguridad de la información (ver también SKILL `auditoria-ciberseguridad`).
 - **ISO/IEC 20000** — gestión de servicios de TI.
 - **ITIL 4** — buenas prácticas de gestión de servicios.
 - **NIST SP 800-53** — controles de seguridad y privacidad (sector público EE. UU., referencia global).
