@@ -6,6 +6,13 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 
 ---
 
+## [2.2.1] — 2026-07-01
+
+### Corregido
+- `auditoria-forense`: la referencia a **ISO 37001** en "Marco de referencia" no citaba la revisión vigente; actualizada a **ISO 37001:2025** para quedar consistente con `auditoria-cumplimiento`.
+
+---
+
 ## [2.2.0] — 2026-07-01
 
 ### Cambiado
@@ -57,6 +64,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 | **Eliminado** | Funcionalidad o contenido removido |
 | **CI/CD** | Cambios en pipelines de integración/despliegue |
 
+[2.2.1]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/marcelinero/auditoria-skills-mcp/releases/tag/v2.0.0

@@ -27,7 +27,7 @@ Esta SKILL guía la conducción de investigaciones forenses preservando la caden
   - Report to the Nations (datos globales sobre fraude).
 - **NIA 240** — Responsabilidades del auditor en relación con el fraude.
 - **GAFI / FATF** — Recomendaciones contra lavado de activos y financiación del terrorismo.
-- **ISO 37001** — Sistemas de gestión antisoborno.
+- **ISO 37001:2025** — Sistemas de gestión antisoborno.
 - **ISO 37301** — Sistemas de gestión de cumplimiento.
 - **OCDE Convención Anticohecho** y guías relacionadas.
 - **FCPA (EE. UU.) y UK Bribery Act** — leyes antisoborno con alcance extraterritorial.
