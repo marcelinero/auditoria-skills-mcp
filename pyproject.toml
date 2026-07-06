@@ -23,7 +23,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage     = "https://github.com/marcelinero/auditoria-skills"
+Homepage     = "https://github.com/marcelinero/auditoria-skills-mcp"
 Repository   = "https://github.com/marcelinero/auditoria-skills-mcp"
 "Bug Tracker" = "https://github.com/marcelinero/auditoria-skills-mcp/issues"
 Changelog    = "https://github.com/marcelinero/auditoria-skills-mcp/blob/main/CHANGELOG.md"

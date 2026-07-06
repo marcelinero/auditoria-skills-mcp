@@ -23,15 +23,8 @@ jobs:
 
       - uses: astral-sh/setup-uv@v5
 
-      # Sincroniza las SKILLs desde el repositorio principal
-      - name: Sincronizar SKILLs desde auditoria-skills
-        run: |
-          git clone --depth 1 https://github.com/marcelinero/auditoria-skills.git _source
-          cp _source/catalog.json auditoria_skills_mcp/data/
-          rm -rf auditoria_skills_mcp/data/skills
-          cp -r _source/skills auditoria_skills_mcp/data/
-          rm -rf _source
-          echo "SKILLs sincronizadas."
+      # Este repositorio es la fuente canónica de las SKILLs:
+      # se publica exactamente lo que está commiteado en auditoria_skills_mcp/data/.
 
       # Validaciones previas al build
       - name: Validar catalog.json y SKILLs
