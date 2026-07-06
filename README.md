@@ -7,8 +7,8 @@
 Zero-install — one command, no repo cloning, no path configuration.
 
 [![PyPI](https://img.shields.io/pypi/v/auditoria-skills-mcp.svg)](https://pypi.org/project/auditoria-skills-mcp/)
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://github.com/marcelinero/auditoria-skills/blob/main/LICENSE)
-[![SKILLs](https://img.shields.io/badge/SKILLs-20-brightgreen.svg)](https://github.com/marcelinero/auditoria-skills)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://github.com/marcelinero/auditoria-skills-mcp/blob/main/LICENSE)
+[![SKILLs](https://img.shields.io/badge/SKILLs-20-brightgreen.svg)](https://github.com/marcelinero/auditoria-skills-mcp/tree/main/auditoria_skills_mcp/data/skills)
 
 ---
 
@@ -172,12 +172,12 @@ Load the relevant SKILLs and build the engagement plan.
 
 ---
 
-## Content repository
+## SKILLs catalog
 
-SKILLs live in the main repository:
-**[github.com/marcelinero/auditoria-skills](https://github.com/marcelinero/auditoria-skills)**
+This repository is the canonical source of the catalog. The 20 SKILLs live in
+**[`auditoria_skills_mcp/data/skills/`](https://github.com/marcelinero/auditoria-skills-mcp/tree/main/auditoria_skills_mcp/data/skills)** — plain Markdown + YAML, readable directly on GitHub.
 
-Issues and contributions (new SKILLs, framework updates) → [this repository](https://github.com/marcelinero/auditoria-skills-mcp/issues/new/choose).
+Issues and contributions (new SKILLs, framework updates) → [open an issue](https://github.com/marcelinero/auditoria-skills-mcp/issues/new/choose).
 
 ---
 
@@ -189,4 +189,4 @@ Issues and contributions (new SKILLs, framework updates) → [this repository](h
 
 ## License
 
-[CC BY-SA 4.0](https://github.com/marcelinero/auditoria-skills/blob/main/LICENSE)
+[CC BY-SA 4.0](https://github.com/marcelinero/auditoria-skills-mcp/blob/main/LICENSE)

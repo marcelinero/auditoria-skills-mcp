@@ -6,6 +6,20 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 
 ---
 
+## [2.2.2] — 2026-07-06
+
+### Corregido
+- **El pipeline de publicación pisaba las SKILLs de este repo** con una copia clonada de `marcelinero/auditoria-skills` (desactualizado desde mayo 2026) justo antes del build. Por eso los paquetes 2.2.0 y 2.2.1 publicados en PyPI **no incluyen** las actualizaciones de marcos normativos anunciadas en este CHANGELOG (verificado descargando el wheel 2.2.1: `auditoria-cumplimiento` aún referencia ISO 37001 sin la revisión :2025). El paso de sincronización fue eliminado; a partir de ahora se publica exactamente lo commiteado aquí. Se requiere un release de contenido (2.2.2) para corregir lo publicado.
+
+### Cambiado
+- Este repositorio pasa a ser la **fuente canónica del catálogo de SKILLs** (antes documentada en `marcelinero/auditoria-skills`). README actualizado: badges, sección "SKILLs catalog" y enlace de licencia apuntan ahora a este repo.
+- `Homepage` en `pyproject.toml` apunta a este repositorio.
+
+### Agregado
+- Archivo `LICENSE` con el texto oficial de CC BY-SA 4.0.
+
+---
+
 ## [2.2.1] — 2026-07-01
 
 ### Corregido
@@ -64,6 +78,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 | **Eliminado** | Funcionalidad o contenido removido |
 | **CI/CD** | Cambios en pipelines de integración/despliegue |
 
+[2.2.2]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.0.0...v2.1.0

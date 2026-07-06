@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "auditoria-skills-mcp"
-version = "2.2.1"
+version = "2.2.2"
 description = "MCP server with 20 internal-audit SKILLs grounded in global standards (IIA, COSO, NIST, ISO, IFRS)"
 readme = "README.md"
 license = { text = "CC-BY-SA-4.0" }
@@ -23,7 +23,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage     = "https://github.com/marcelinero/auditoria-skills"
+Homepage     = "https://github.com/marcelinero/auditoria-skills-mcp"
 Repository   = "https://github.com/marcelinero/auditoria-skills-mcp"
 "Bug Tracker" = "https://github.com/marcelinero/auditoria-skills-mcp/issues"
 Changelog    = "https://github.com/marcelinero/auditoria-skills-mcp/blob/main/CHANGELOG.md"
