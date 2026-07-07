@@ -90,6 +90,7 @@ Ejemplo: `feat(agent): add system prompt and initial eval set`
 - **Nunca pushees directamente a `main`.** Todo cambio pasa por rama + PR.
 - **Nunca commitees secretos** (API keys, tokens, credenciales). Si detectas uno, detén el proceso y avisa.
 - **Siempre actualiza `CHANGELOG.md`** cuando hagas un cambio material.
+- **Antes de abrir cualquier PR con cambios materiales, revisa y ajusta la documentación en el mismo PR**: `README.md`, `CHANGELOG.md`, `BACKLOG.md` y `CLAUDE.md` deben seguir siendo consistentes con el cambio (versiones, rutas, procedimientos, comandos, estado del proyecto). Si el cambio vuelve obsoleta una sección de cualquiera de esos archivos, corrígela antes del merge — la deriva de documentación no se acumula.
 - **Siempre taggea después de merge a main** para releases.
 - **Nunca modifiques archivos en `auditoria_skills_mcp/data/skills/` sin autorización explícita del usuario.** Las skills son la fuente de verdad metodológica y el usuario es su curador.
 - **Antes de correr comandos destructivos** (`git reset --hard`, `git push --force`, `rm -rf`), confirma con el usuario.
