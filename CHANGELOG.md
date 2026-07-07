@@ -6,6 +6,14 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 
 ---
 
+## [Unreleased]
+
+### Seguridad
+- Endurecimiento del repositorio y del pipeline (2026-07-06): rulesets de protección para `main` (PR obligatorio, sin force-push) y tags `v*` (inmutables); alertas y actualizaciones de seguridad de Dependabot habilitadas; `publish.yml` reducido a `contents: read` y `mcp-publisher` fijado a v1.7.9. Sin impacto en el paquete publicado.
+- Documentación corregida: se elimina la instrucción `uvx auditoria-skills-mcp --version` del README (el entrypoint no soporta ese flag; queda en backlog implementarlo).
+
+---
+
 ## [2.2.2] — 2026-07-06
 
 ### Corregido
