@@ -60,8 +60,8 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 # Forzar última versión (recomendado tras una actualización de marcos)
 uvx auditoria-skills-mcp@latest
 
-# Verificar la versión instalada en caché
-uvx auditoria-skills-mcp --version
+# Si quedó una versión vieja en caché, limpiarla
+uv cache clean auditoria-skills-mcp
 ```
 
 Cuando un marco de referencia se revisa (COSO, NIST, IIA, ISO…), se publica una nueva versión en PyPI y queda registrada en el [CHANGELOG](CHANGELOG.md). Si detectas que un estándar fue actualizado y el SKILL no lo refleja, [abre un issue](https://github.com/marcelinero/auditoria-skills-mcp/issues/new/choose) — no hace falta escribir código.
@@ -104,7 +104,7 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para detalles.
 
 | Nivel | Qué es | Quién | Control |
 |-------|--------|-------|---------|
-| **Canónico** | Versión oficial en PyPI | Mantendedor | Centralizado, sigue estándares globales |
+| **Canónico** | Versión oficial en PyPI | Mantenedor | Centralizado, sigue estándares globales |
 | **Local** | Adaptado a tu entidad | Tú | Descentralizado, sin tocar lo común |
 | **Comunitario** | Mejoras genéricas aceptadas | PR + revisión | Se fusionan a `main` si pasan criterios |
 

@@ -30,6 +30,8 @@ Está publicado en PyPI, instalable con `uvx` o `pip`, y registrado en el portal
 ├── server.json               # Manifiesto del MCP Registry (versión debe coincidir con pyproject)
 ├── pyproject.toml            # Empaquetado (hatchling); versión del paquete
 ├── CHANGELOG.md              # Registro de cambios por versión
+├── BACKLOG.md                # Hoja de ruta: en curso, próximos releases, ideas, hecho
+├── CONTRIBUTING.md           # Guía de contribución (niveles canónico/local/comunitario)
 ├── LICENSE                   # CC BY-SA 4.0
 ├── README.md                 # Documentación principal (se renderiza en PyPI)
 └── CLAUDE.md                 # Este archivo
@@ -43,8 +45,9 @@ Lee estos archivos antes de actuar sobre el proyecto:
 
 1. `README.md` — resumen actualizado del proyecto
 2. `CHANGELOG.md` — últimos cambios
-3. `agent/system-prompt.md` — comportamiento esperado del agente
-4. Estado de git: rama activa, working tree limpio o no, últimos commits
+3. `BACKLOG.md` — qué está en curso y qué sigue
+4. `agent/system-prompt.md` — comportamiento esperado del agente (cuando exista)
+5. Estado de git: rama activa, working tree limpio o no, últimos commits
 
 ## Convenciones de versionado
 
@@ -60,7 +63,7 @@ Pre-releases usan sufijo tipo `-beta.1`, `-rc.1`.
 
 ## Convenciones de ramas
 
-- `main` — siempre desplegable, protegida, no se pushea directamente
+- `main` — siempre desplegable; protegida por ruleset (`protect-main`): el push directo y el force-push están bloqueados a nivel de GitHub, todo entra por PR. Los tags `v*` son inmutables (`protect-release-tags`).
 - `feat/<nombre>` — nueva funcionalidad
 - `fix/<nombre>` — bugfix
 - `chore/<nombre>` — mantenimiento sin efecto funcional
@@ -88,7 +91,7 @@ Ejemplo: `feat(agent): add system prompt and initial eval set`
 - **Nunca commitees secretos** (API keys, tokens, credenciales). Si detectas uno, detén el proceso y avisa.
 - **Siempre actualiza `CHANGELOG.md`** cuando hagas un cambio material.
 - **Siempre taggea después de merge a main** para releases.
-- **Nunca modifiques archivos en `skills/` sin autorización explícita del usuario.** Las skills son la fuente de verdad metodológica y el usuario es su curador.
+- **Nunca modifiques archivos en `auditoria_skills_mcp/data/skills/` sin autorización explícita del usuario.** Las skills son la fuente de verdad metodológica y el usuario es su curador.
 - **Antes de correr comandos destructivos** (`git reset --hard`, `git push --force`, `rm -rf`), confirma con el usuario.
 
 ---
@@ -111,27 +114,23 @@ Pasos:
    git status
    ```
 2. Confirmar con el usuario que el agente cumple criterios de release (evals, docs, README actualizado).
-3. Si falta `CHANGELOG.md`, crearlo con sección `## [2.2.0] - YYYY-MM-DD` que describa: capa de agente añadida (system prompt, evals, README del kit), sin cambios rompedores en MCP ni skills.
-4. Merge a `main`:
+3. Actualizar `CHANGELOG.md` con sección `## [2.3.0] - YYYY-MM-DD` que describa: capa de agente añadida (system prompt, evals, README del kit), sin cambios rompedores en MCP ni skills.
+4. Llevar la rama a `main` vía PR (el push directo está bloqueado por ruleset):
    ```bash
-   git checkout main
-   git pull origin main
-   git merge --no-ff feat/agent-layer -m "merge: agent layer for v2.2.0"
+   gh pr create --base main --head feat/agent-layer --title "feat(agent): agent layer for v2.3.0"
+   gh pr merge --merge
    ```
-5. Taggear:
+5. Taggear desde `main` actualizado:
    ```bash
-   git tag -a v2.2.0 -m "v2.2.0 — Agent layer added (non-breaking)"
+   git checkout main && git pull origin main
+   git tag -a v2.3.0 -m "v2.3.0 — Agent layer added (non-breaking)"
+   git push origin v2.3.0
    ```
-6. Push:
+6. Crear release en GitHub apuntando al tag:
    ```bash
-   git push origin main
-   git push origin v2.2.0
+   gh release create v2.3.0 --title "v2.3.0 — Agent layer" --notes-from-tag
    ```
-7. Crear release en GitHub apuntando al tag (si `gh` CLI está instalado):
-   ```bash
-   gh release create v2.2.0 --title "v2.2.0 — Agent layer" --notes-from-tag
-   ```
-8. Reportar al usuario: link del release, resumen de lo publicado.
+7. Reportar al usuario: link del release, resumen de lo publicado.
 
 ### PO-2: Crear nueva rama de feature
 
@@ -148,11 +147,12 @@ Pasos:
 ### PO-3: Agregar una skill nueva
 
 1. Confirmar con el usuario: nombre de la skill, categoría (proceso o especialidad).
-2. Crear carpeta en `skills/<categoria>/<nombre>/`.
+2. Crear carpeta en `auditoria_skills_mcp/data/skills/<categoria>/<nombre>/`.
 3. Crear `SKILL.md` con el frontmatter YAML estándar (`name`, `description`) y la estructura del catálogo (Propósito, Cuándo activar, Marco de referencia, Proceso, Outputs, Banderas rojas, Buenas prácticas, Conexión con otras SKILLs).
-4. Actualizar `skills/README.md` con la nueva skill en la tabla correspondiente.
-5. Actualizar `CLAUDE.md` si la nueva skill implica cambios en procedimientos.
-6. Sugerir al usuario agregar al menos 2 evals nuevos en `agent/evals.json` que activen la nueva skill.
+4. Registrar la skill en `auditoria_skills_mcp/data/catalog.json` (name, type, category/domain, path, frameworks) — el servidor solo sirve lo que está en el catálogo.
+5. Actualizar las tablas de SKILLs del `README.md` raíz.
+6. Actualizar `CLAUDE.md` si la nueva skill implica cambios en procedimientos.
+7. Sugerir al usuario agregar al menos 2 evals nuevos en `agent/evals.json` que activen la nueva skill.
 
 ### PO-4: Agregar o modificar un eval
 
@@ -175,11 +175,11 @@ Pasos:
    - Si se cae en algún `failure_mode`
 4. Sugerir ajustes al system prompt o a las descriptions de las skills si el eval fallaría.
 
-### PO-6: Bugfix en v2.1 (hotfix)
+### PO-6: Bugfix en producción (hotfix)
 
-Si el usuario reporta un bug en producción de v2.1.x:
+Si el usuario reporta un bug en la versión publicada actual (ver "Estado actual" arriba):
 
-1. `git checkout -b fix/<nombre> v2.1.0`
+1. `git checkout -b fix/<nombre> <tag de la versión publicada>`
 2. Aplicar fix, commitear.
 3. Tag: `v2.1.1` (o el siguiente patch disponible).
 4. Merge back a `main` para no perder el fix.
@@ -188,7 +188,7 @@ Si el usuario reporta un bug en producción de v2.1.x:
 
 ## Lo que NO debes hacer sin permiso explícito
 
-- Modificar archivos en `skills/` (el usuario es su curador).
+- Modificar archivos en `auditoria_skills_mcp/data/skills/` (el usuario es su curador).
 - Publicar a PyPI (`twine upload`, `uv publish`, etc.).
 - Hacer force push a cualquier rama.
 - Cambiar la configuración del MCP publicado.
@@ -213,4 +213,4 @@ El agente en tiempo de ejecución tendrá su propio `system-prompt.md` que le da
 
 ---
 
-*Última actualización de este archivo: 2026-07-06, al consolidar este repo como fuente canónica del catálogo (v2.2.2). La capa de agente queda planeada para v2.3.0.*
+*Última actualización de este archivo: 2026-07-07 — refresco general de documentación: rutas reales del repo, PO-1 apuntando a v2.3.0, protección de `main` y tags por rulesets, y BACKLOG.md incorporado al flujo de trabajo.*

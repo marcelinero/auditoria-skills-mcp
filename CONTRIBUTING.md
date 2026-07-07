@@ -8,7 +8,7 @@ Bienvenido. Este documento explica cómo evolucionan los SKILLs en tres niveles:
 
 ### 1️⃣ Versión canónica (oficial, centralizada)
 
-Cuando un marco de referencia se revisa (COSO, NIST, IIA, ISO, etc.), el mantendedor actualiza el SKILL correspondiente y lo publica en PyPI. Esto garantiza:
+Cuando un marco de referencia se revisa (COSO, NIST, IIA, ISO, etc.), el mantenedor actualiza el SKILL correspondiente y lo publica en PyPI. Esto garantiza:
 
 - **Fidelidad al estándar**: cambios sincronizados con la versión oficial del marco.
 - **Actualización centralizada**: todos los auditores reciben la versión mejorada automáticamente.
@@ -16,7 +16,7 @@ Cuando un marco de referencia se revisa (COSO, NIST, IIA, ISO, etc.), el mantend
 
 **Flujo:**
 ```
-Revisión de COSO/NIST/ISO → Mantendedor ajusta SKILL → PR aprobado → Publicación PyPI
+Revisión de COSO/NIST/ISO → Mantenedor ajusta SKILL → PR aprobado → Publicación PyPI
 ```
 
 ### 2️⃣ Adaptación local (descentralizado, sin tocar lo común)
@@ -35,7 +35,7 @@ Como los SKILLs son Markdown + YAML, cada auditor puede:
 
 **Flujo:**
 ```
-Fork repo → Clona localmente → Edita ./data/skills/xxx/SKILL.md → Ejecuta: uv run python -m auditoria_skills_mcp
+Fork repo → Clona localmente → Edita ./auditoria_skills_mcp/data/skills/xxx/SKILL.md → Ejecuta: uv run python -m auditoria_skills_mcp
 ```
 
 ### 3️⃣ Mejora compartida (comunidad, después de validar)
@@ -46,7 +46,7 @@ Si mejoras algo que es **genérico y reutilizable** (no específico de tu entida
   - Qué mejoró y por qué.
   - Qué marco o estándar lo justifica.
   - Si es adaptable a otros contextos o solo a uno.
-- **Revisión del mantendedor**:
+- **Revisión del mantenedor**:
   - ¿Es realmente genérico?
   - ¿Está alineado con los marcos de referencia?
   - ¿Mejora la calidad sin añadir complejidad innecesaria?
@@ -161,10 +161,10 @@ Cuando un PR se aprueba, la versión se incrementa antes de publicar en PyPI.
 Cuando la mejora es **genérica y beneficia a otros auditores**, no solo a tu contexto.
 
 ### ¿Cómo sé si es genérico?
-Si aplica a múltiples entidades, industrias o geographies. Si es específico de tu país, política interna o matriz local → mantén en tu fork.
+Si aplica a múltiples entidades, industrias o geografías. Si es específico de tu país, política interna o matriz local → mantén en tu fork.
 
 ### ¿Quién revisa los PRs?
-El mantendedor (@marcelinero). Los criterios están arriba.
+El mantenedor (@marcelinero). Los criterios están arriba.
 
 ### ¿Qué pasa si mi PR se rechaza?
 Nada malo. Puedes mantenerlo en tu fork adaptado, o ajustarlo y reenviarlo. Feedback constructivo.
