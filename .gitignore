@@ -19,3 +19,6 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Claude Code (config local con permisos de esta máquina)
+.claude/settings.local.json
