@@ -22,7 +22,9 @@ A diferencia de la auditoría operativa o financiera, su criterio principal es *
 ## Marco de referencia
 
 ### Estándares de gestión de cumplimiento
-- **ISO 37301** — Sistemas de gestión de cumplimiento (CMS).
+- **ISO 37301** — Sistemas de gestión de cumplimiento (CMS). En revisión: ISO cerró el periodo de revisión el 5 de junio de 2026 y marcó el estándar para actualización; la edición 2021 sigue vigente hasta que se publique la nueva — monitorear cambios.
+- **IIA Third-Party Topical Requirement** — Topical Requirement obligatorio bajo las Normas Globales de Auditoría Interna 2025, vigente desde el 15 de septiembre de 2026, para la gestión de riesgos de terceros.
+- **IIA Anti-Corruption Topical Requirement** — en consulta pública del 8 de junio al 23 de julio de 2026; aún no es final ni obligatorio — validar su estado antes de citarlo como vigente.
 - **ISO 37001:2025** — Sistemas de gestión antisoborno (ABMS). Reemplaza la versión 2016 (que incluía la Enmienda 1:2024 sobre acción climática); incorpora nuevas subcláusulas sobre cambio climático y conflictos de interés, y renombra la "función de cumplimiento antisoborno" a "función antisoborno" con independencia operativa más clara. Periodo de transición para certificaciones existentes hasta el 28 de febrero de 2027.
 - **ISO 31022** — Riesgos legales.
 - **OCDE Good Practice Guidance on Internal Controls, Ethics and Compliance**.
@@ -35,7 +37,7 @@ A diferencia de la auditoría operativa o financiera, su criterio principal es *
 - **OFAC, ONU, UE** — listas de sanciones internacionales.
 - **GAFI / FATF** — antilavado.
 - **Wolfsberg Principles** — sector financiero.
-- **PCI-DSS** — industria de tarjetas de pago.
+- **PCI-DSS v4.0.1** — industria de tarjetas de pago; los requisitos que antes eran "best practice" son obligatorios desde el 31 de marzo de 2025.
 - **HIPAA, HITECH** (salud, EE. UU.).
 - **SOX** (financiero, EE. UU.).
 

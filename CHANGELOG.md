@@ -8,6 +8,21 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 
 ## [Unreleased]
 
+---
+
+## [2.2.3] — 2026-07-29
+
+### Cambiado
+- Revisión de vigencia normativa de los marcos citados en 8 SKILLs (v2.2.0/2.2.1 cubrió el ciclo anterior; este release cierra los gaps sustantivos surgidos desde entonces, con alcance acotado a contenido normativo nuevo o cambiado):
+  - `auditoria-ciberseguridad`: **OWASP Top 10:2025** (publicado nov. 2025, reordena categorías e incorpora "Software Supply Chain Failures" y "Mishandling of Exceptional Conditions"); se agrega el **IIA Cybersecurity Topical Requirement** (obligatorio desde el 5-feb-2026).
+  - `auditoria-inteligencia-artificial`: calendario del EU AI Act precisado — el Digital Omnibus (acuerdo del 7-may-2026) diferencia sistemas standalone de Alto Riesgo del Anexo III (2-dic-2027) de sistemas embebidos en producto (2-ago-2028); se agrega el **NIST AI RMF Generative AI Profile (NIST AI 600-1)**, ausente hasta ahora pese a ser el marco más relevante para auditorías de IA generativa.
+  - `auditoria-esg-sostenibilidad`: confirmado que la Comisión Europea **adoptó el 3-jul-2026 el acto delegado final con los ESRS simplificados** (antes descrito como pendiente); se agregan las **enmiendas del ISSB a IFRS S2** sobre emisiones financiadas (vigentes desde periodos que inicien en 2027); nota del GHG Protocol actualizada con el Phase 1 Progress Update (31-mar-2026).
+  - `auditoria-ambiental`: se agrega la misma nota de revisión en curso del **GHG Protocol**, ausente hasta ahora pese a que el estándar es un marco anclado del SKILL (inconsistencia con `auditoria-esg-sostenibilidad`).
+  - `auditoria-tecnologia-informacion` y `analitica-datos`: **ITAF actualizado a su 5ª edición** (ISACA, feb. 2026), que reemplaza la de 2020.
+  - `auditoria-gestion-desempeno`: **UK Corporate Governance Code** especificado a la edición 2024 (Provisión 29, declaración de efectividad de controles materiales, operativa desde 1-ene-2026); **GAO Yellow Book** especificado a la revisión 2024 (cambio de "quality control" a "quality management", vigente desde 15-dic-2025).
+  - `auditoria-cumplimiento` y `auditoria-forense`: se agregan los **IIA Topical Requirements** de Terceros (vigente desde 15-sep-2026) y Anticorrupción (en consulta pública, aún no vigente); nota de **ISO 37301 en revisión** (ISO cerró revisión el 5-jun-2026); `auditoria-cumplimiento` alinea "PCI-DSS" a **PCI-DSS v4.0.1** por consistencia con `auditoria-ciberseguridad`.
+- `catalog.json` actualizado a la versión **1.2.0**; corregida inconsistencia en `auditoria-gestion-desempeno` (el campo `frameworks` decía "ISO 37000" sin año, el cuerpo del SKILL ya decía "ISO 37000:2021").
+
 ### Seguridad
 - Endurecimiento del repositorio y del pipeline (2026-07-06): rulesets de protección para `main` (PR obligatorio, sin force-push) y tags `v*` (inmutables); alertas y actualizaciones de seguridad de Dependabot habilitadas; `publish.yml` reducido a `contents: read` y `mcp-publisher` fijado a v1.7.9. Sin impacto en el paquete publicado.
 - Documentación corregida: se elimina la instrucción `uvx auditoria-skills-mcp --version` del README (el entrypoint no soporta ese flag; queda en backlog implementarlo).

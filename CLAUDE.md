@@ -55,7 +55,7 @@ Lee estos archivos antes de actuar sobre el proyecto:
 - **MAJOR**: cambios que rompen compatibilidad con versiones anteriores
 - **MINOR**: features nuevas retrocompatibles
 - **PATCH**: bugfixes retrocompatibles
-- Estado actual: **v2.2.2**
+- Estado actual: **v2.2.3**
 - Próxima versión objetivo: **v2.3.0** (agrega capa de agente, no rompe nada de v2.2.x)
 - Reservar **v3.0.0** para el momento en que el agente pase a ser la interfaz principal
 

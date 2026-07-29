@@ -25,7 +25,7 @@ Es la dimensión más estratégica de la auditoría — alimenta directamente al
 - **OCDE Principios de Gobierno Corporativo** (2023).
 - **ISO 37000:2021** — Gobernanza de organizaciones — Guía.
 - **King IV Report** (Sudáfrica, referencia global).
-- **UK Corporate Governance Code**.
+- **UK Corporate Governance Code (edición 2024)** — vigente desde el 1 de enero de 2025; su cambio principal, la Provisión 29 (declaración del consejo sobre la efectividad del sistema de controles materiales, más allá de la revelación narrativa previa), es operativa desde el 1 de enero de 2026.
 - **Códigos nacionales** (en Colombia: Código País — Circular 028 de la SFC).
 - **Modelo de las Tres Líneas** (IIA, 2020).
 
@@ -37,7 +37,7 @@ Es la dimensión más estratégica de la auditoría — alimenta directamente al
 ### Auditoría de desempeño
 - **IIA Normas Globales (2025)** — Estándares 14.x de desempeño del trabajo.
 - **INTOSAI ISSAI 3000–3200** — Guías de auditoría de desempeño (sector público).
-- **GAO Yellow Book** — Government Auditing Standards (EE. UU.).
+- **GAO Yellow Book — Government Auditing Standards, revisión 2024** (EE. UU.) — vigente para periodos que inician a partir del 15 de diciembre de 2025; cambia el enfoque de "quality control" a "quality management" (gestión de calidad basada en riesgo, escalable por tamaño de la organización auditora), ya en vigor.
 
 ### Estrategia y desempeño
 - **Balanced Scorecard** (Kaplan & Norton).

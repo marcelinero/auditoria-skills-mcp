@@ -20,7 +20,7 @@ La auditoría de TI evalúa el gobierno y los controles sobre la infraestructura
 ## Marco de referencia
 
 - **COBIT 2019** (ISACA) — gobierno y gestión de TI empresarial.
-- **ITAF — Information Technology Assurance Framework** (ISACA).
+- **ITAF — IT Audit Framework, 5ª edición (ISACA, feb. 2026)** — reemplaza la 4ª edición (2020); moderniza terminología y ejemplos para nube, IA/ML y automatización de negocio, incorpora confianza digital en planeación/trabajo de campo/reporte y amplía el alcance a analítica de datos, auditoría ágil y aseguramiento continuo. Incluye la guía complementaria "ITAF Performance Guideline 2208: IT Audit Sampling".
 - **GTAGs — Global Technology Audit Guides** (IIA): el IIA retiró la numeración clásica (GTAG 1, 8, 14, etc.) y viene reemplazando la serie con guías temáticas alineadas a las Normas Globales 2024, entre ellas:
   - "Auditing IT Governance and IT Management" (3ª edición, 2025) — reemplaza las antiguas GTAG 1 y "Management of IT Auditing".
   - "Auditing Business Applications" (2025) — sucesora conceptual de la antigua GTAG 8.
