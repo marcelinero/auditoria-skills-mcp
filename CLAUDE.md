@@ -185,6 +185,17 @@ Si el usuario reporta un bug en la versión publicada actual (ver "Estado actual
 3. Tag: `v2.1.1` (o el siguiente patch disponible).
 4. Merge back a `main` para no perder el fix.
 
+### PO-7: Revisar el PR de la auditoría trimestral de marcos normativos
+
+Desde 2026-07-29 existe una rutina programada de Claude Code (`auditoria-marcos-normativos-trimestral`, cron trimestral: 1-ene/abr/jul/oct) que investiga en web si los marcos citados en las 20 SKILLs siguen vigentes y, si encuentra gaps sustantivos, abre un PR (rama `fix/actualizar-marcos-YYYY-MM`) con la propuesta de actualización — nunca lo mergea. Administración de la rutina: [claude.ai/code/routines](https://claude.ai/code/routines). Si no encuentra gaps, no abre PR.
+
+Cuando llegue ese PR:
+
+1. Revisar cada cambio propuesto contra la fuente/evidencia citada en el cuerpo del PR (organismo emisor, fecha, URL).
+2. Confirmar que el bump de versión es PATCH y que no tocó `agent/` ni `feat/agent-layer`.
+3. Si algo quedó marcado como "a validar manualmente" en el resumen de la corrida, resolverlo antes de mergear.
+4. Mergear, taggear (mismo flujo que PO-6) y reportar al usuario.
+
 ---
 
 ## Lo que NO debes hacer sin permiso explícito

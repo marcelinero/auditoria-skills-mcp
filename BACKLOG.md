@@ -25,6 +25,10 @@ Rama: `feat/agent-layer` · Plan detallado aprobado (sesión Claude Code 2026-07
 
 ---
 
+## Automatización activa
+
+- **Auditoría trimestral de vigencia normativa** (`auditoria-marcos-normativos-trimestral`, creada 2026-07-29): rutina programada de Claude Code (cron `0 13 1 1,4,7,10 *`, 1-ene/abr/jul/oct 8am Bogotá) que investiga en web si los marcos citados en las 20 SKILLs siguen vigentes, y abre un PR con la propuesta solo si detecta gaps sustantivos (nunca mergea, nunca toca `feat/agent-layer`/v2.3.0). Administración: [claude.ai/code/routines](https://claude.ai/code/routines). Próxima corrida: 2026-10-01.
+
 ## Pendiente de seguridad (requiere acción del owner)
 
 - **Trusted Publishing en PyPI**: configurar en pypi.org (*Manage project → Publishing*) el publisher OIDC apuntando a `marcelinero/auditoria-skills-mcp` / `publish.yml`; después ajustar `uv publish` en el workflow y **eliminar el secret `PYPI_TOKEN`** (token de larga vida, último riesgo alto abierto de la auditoría de seguridad del 2026-07-06).
