@@ -22,7 +22,7 @@ Cuando es viable, la analítica debe **preferirse sobre el muestreo**. El muestr
 
 - **GTAG 16: Data Analysis Technologies** (IIA).
 - **GTAG 3: Continuous Auditing** (IIA).
-- **ITAF — IT Audit Framework** (ISACA).
+- **ITAF — IT Audit Framework, 5ª edición** (ISACA, feb. 2026) — la nueva edición amplía el alcance a analítica de datos, auditoría ágil y aseguramiento continuo, e incluye la guía complementaria "ITAF Performance Guideline 2208: IT Audit Sampling" para muestreo con enfoque data-driven.
 - **Normas Globales de Auditoría Interna (IIA, 2025)** — Estándar 14 (desempeño del trabajo).
 - **NIA 500** — Evidencia (la analítica es una técnica de obtención de evidencia).
 - **AICPA Audit Data Standards (ADS)** — formatos comunes para datos contables.

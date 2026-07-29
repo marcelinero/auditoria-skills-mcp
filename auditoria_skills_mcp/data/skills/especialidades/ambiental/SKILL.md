@@ -35,7 +35,7 @@ Es complementaria a la auditoría ESG: mientras esta última se enfoca en divulg
 - **ISO 14065** — Requisitos para organismos de validación/verificación.
 - **ISO 14067** — Huella de carbono de productos.
 - **ISO 14068-1** — Carbono neutralidad.
-- **GHG Protocol** — Corporate Standard, Project Standard, Product Standard, Scope 2 Guidance, Scope 3 Standard.
+- **GHG Protocol** — Corporate Standard, Project Standard, Product Standard, Scope 2 Guidance, Scope 3 Standard. Todos en revisión: el Phase 1 Progress Update del Scope 3 Standard se publicó el 31 de marzo de 2026, con borrador de consulta pública esperado a mediados de 2026; el Corporate Standard y las guías de Scope 2/3 revisadas no se esperan publicadas antes de finales de 2027 — auditar contra la versión vigente al momento del trabajo.
 
 ### Otros
 - **ISO 14040 / 14044** — Análisis de Ciclo de Vida (LCA).

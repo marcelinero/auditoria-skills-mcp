@@ -25,6 +25,10 @@ Rama: `feat/agent-layer` · Plan detallado aprobado (sesión Claude Code 2026-07
 
 ---
 
+## Automatización activa
+
+- **Auditoría trimestral de vigencia normativa** (`auditoria-marcos-normativos-trimestral`, creada 2026-07-29): rutina programada de Claude Code (cron `0 13 1 1,4,7,10 *`, 1-ene/abr/jul/oct 8am Bogotá) que investiga en web si los marcos citados en las 20 SKILLs siguen vigentes, y abre un PR con la propuesta solo si detecta gaps sustantivos (nunca mergea, nunca toca `feat/agent-layer`/v2.3.0). Administración: [claude.ai/code/routines](https://claude.ai/code/routines). Próxima corrida: 2026-10-01.
+
 ## Pendiente de seguridad (requiere acción del owner)
 
 - **Trusted Publishing en PyPI**: configurar en pypi.org (*Manage project → Publishing*) el publisher OIDC apuntando a `marcelinero/auditoria-skills-mcp` / `publish.yml`; después ajustar `uv publish` en el workflow y **eliminar el secret `PYPI_TOKEN`** (token de larga vida, último riesgo alto abierto de la auditoría de seguridad del 2026-07-06).
@@ -47,6 +51,7 @@ Rama: `feat/agent-layer` · Plan detallado aprobado (sesión Claude Code 2026-07
 
 ## Hecho
 
+- **v2.2.3 (2026-07-29)** — Refresh de vigencia normativa: gaps sustantivos corregidos en 8 SKILLs (OWASP Top 10:2025, IIA Topical Requirements de Ciberseguridad/Terceros/Anticorrupción, calendario preciso del EU AI Act Digital Omnibus, NIST AI RMF Generative AI Profile, adopción confirmada del acto delegado ESRS, enmiendas ISSB a IFRS S2, ITAF 5ª edición, UK Corporate Governance Code 2024 Provisión 29, GAO Yellow Book 2024, ISO 37301 en revisión); `catalog.json` a v1.2.0. No toca `feat/agent-layer` ni la v2.3.0.
 - **Endurecimiento de seguridad (2026-07-06/07)** — Rulesets `protect-main` (PR obligatorio, sin force-push) y `protect-release-tags` (tags `v*` inmutables); Dependabot alerts + security updates habilitados; `publish.yml` con `contents: read` y `mcp-publisher` fijado a v1.7.9; auditoría sin secretos en árbol ni historial.
 - **v2.2.2 (2026-07-06)** — Consolidación: este repo es la fuente canónica del catálogo; eliminado el paso del pipeline que pisaba las SKILLs con el repo `auditoria-skills` (bug que hizo que 2.2.0/2.2.1 publicaran contenido viejo); LICENSE CC BY-SA 4.0 agregada; CLAUDE.md versionado; repo `auditoria-skills` deprecado y archivado en GitHub.
 - **v2.2.0 / v2.2.1 (2026-07-01)** — Actualización de marcos normativos en las SKILLs (ISO 37001:2025, CIS v8.1, EU AI Act, ESRS post-Ómnibus, etc.). *Nota: llegaron a PyPI recién con 2.2.2 por el bug del pipeline.*

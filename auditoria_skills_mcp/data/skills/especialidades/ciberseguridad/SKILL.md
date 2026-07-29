@@ -32,7 +32,8 @@ La auditoría de ciberseguridad evalúa si la organización entiende, gestiona y
 - **NIS 2 Directive** (UE) — ciberseguridad de entidades esenciales e importantes.
 - **PCI-DSS v4.0.1** — pagos; los requisitos que antes eran "best practice" son obligatorios desde el 31 de marzo de 2025.
 - **CSA Cloud Controls Matrix**.
-- **OWASP Top 10** — riesgos de aplicaciones web.
+- **OWASP Top 10:2025** — riesgos de aplicaciones web (publicado nov. 2025); Broken Access Control se mantiene en el #1, Security Misconfiguration sube al #2, y se incorporan las nuevas categorías "Software Supply Chain Failures" (#3) y "Mishandling of Exceptional Conditions" (#10).
+- **IIA Cybersecurity Topical Requirement** — primer Topical Requirement obligatorio bajo las Normas Globales de Auditoría Interna 2025; vigente desde el 5 de febrero de 2026, establece 17 requisitos mínimos para evaluar gobierno, gestión de riesgos y controles de ciberseguridad.
 
 ## Conceptos fundamentales
 

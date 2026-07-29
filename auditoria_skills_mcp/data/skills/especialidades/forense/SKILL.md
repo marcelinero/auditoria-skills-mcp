@@ -28,8 +28,9 @@ Esta SKILL guía la conducción de investigaciones forenses preservando la caden
 - **NIA 240** — Responsabilidades del auditor en relación con el fraude.
 - **GAFI / FATF** — Recomendaciones contra lavado de activos y financiación del terrorismo.
 - **ISO 37001:2025** — Sistemas de gestión antisoborno.
-- **ISO 37301** — Sistemas de gestión de cumplimiento.
+- **ISO 37301** — Sistemas de gestión de cumplimiento. En revisión: ISO cerró el periodo de revisión el 5 de junio de 2026 y marcó el estándar para actualización; la edición 2021 sigue vigente hasta que se publique la nueva.
 - **OCDE Convención Anticohecho** y guías relacionadas.
+- **IIA Anti-Corruption Topical Requirement** — en consulta pública del 8 de junio al 23 de julio de 2026 bajo las Normas Globales de Auditoría Interna 2025; aún no es final ni obligatorio — validar su estado antes de citarlo como vigente.
 - **FCPA (EE. UU.) y UK Bribery Act** — leyes antisoborno con alcance extraterritorial.
 - **Wolfsberg Principles** (sector financiero).
 - **ISO/IEC 27037** — manejo de evidencia digital.
