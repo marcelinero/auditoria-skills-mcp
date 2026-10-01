@@ -31,7 +31,7 @@ Es una especialidad emergente con marco regulatorio (EU AI Act) y estándares de
 - **ISO/IEC 24029** — Robustez de redes neuronales.
 - **OECD AI Principles**.
 - **UNESCO Recommendation on the Ethics of AI**.
-- **OWASP Top 10 for LLM Applications**.
+- **OWASP Top 10 for LLM Applications** — edición 2026 publicada el 4 de agosto de 2026 (reemplaza la de 2025); el ranking se recalibró combinando voto de la comunidad (~75%) con datos reales de incidentes (~25%, sobre un corpus de más de 6.600 incidentes clasificados). Cambios relevantes: Prompt Injection y Sensitive Information Disclosure mantienen el #1 y #2; Excessive Agency sube del #6 al #3; "System Prompt Leakage" se renombra y reencuadra como "Hidden Context Exposure" (#8); Improper Output Handling baja del #5 al #10.
 - **MITRE ATLAS** — Adversarial Threat Landscape for AI Systems.
 - **Reguladores sectoriales**: SR 11-7 (Fed Reserve, model risk), normativa local de seguros, salud, banca.
 
