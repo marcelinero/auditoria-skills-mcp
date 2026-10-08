@@ -8,6 +8,10 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 
 ## [Unreleased]
 
+---
+
+## [2.2.5] — 2026-10-08
+
 ### Cambiado
 - `auditoria-inteligencia-artificial`: estatus del "Digital Omnibus" del EU AI Act actualizado de "adopción formal esperada" a adoptado como Reglamento (UE) 2026/1744 (publicado en el DOUE el 24-jul-2026, en vigor desde el 27-jul-2026). Las fechas del Anexo III no cambian.
 
@@ -121,6 +125,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 | **Eliminado** | Funcionalidad o contenido removido |
 | **CI/CD** | Cambios en pipelines de integración/despliegue |
 
+[2.2.5]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.4...v2.2.5
 [2.2.4]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.3...v2.2.4
 [2.2.3]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.2...v2.2.3
 [2.2.2]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.1...v2.2.2
