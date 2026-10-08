@@ -2,32 +2,32 @@
 
 > Hoja de ruta del proyecto. Cada release cuenta una sola historia: las capacidades se liberan de forma paulatina para que el usuario las adopte a su conveniencia. Los items se mueven de sección a medida que se ejecutan.
 >
-> Última actualización: 2026-07-07.
+> Última actualización: 2026-10-08.
 
 ---
 
 ## En curso — v2.3.0: Capa de agente (kit sin código)
 
-Rama: `feat/agent-layer` · Plan detallado aprobado (sesión Claude Code 2026-07-06).
+Rama: `feat/agent-layer` (borrada el 2026-10-08 por estar vacía; recrear desde `main` al arrancar) · Plan detallado aprobado (sesión Claude Code 2026-07-06).
 
 **Objetivo:** que un auditor use un "agente auditor" en sus auditorías locales con Claude Desktop o Claude Code, sin escribir código: el kit son un system prompt, un set de evals y una guía de instalación. El MCP existente provee la metodología (las 20 SKILLs).
 
 | # | Item | Estado |
 |---|------|--------|
-| 0 | Actualizar `feat/agent-layer` desde `main` (v2.2.2) — fast-forward limpio | Pendiente |
+| 0 | Crear `feat/agent-layer` desde `main` (v2.2.5; la rama anterior se borró por estar vacía) | Pendiente |
 | 1 | `agent/system-prompt.md` — identidad de auditor senior, límites no negociables (no firma, no acepta riesgos, escala fraude), uso de las 3 tools MCP, política de activación de skills, orquestación multi-skill (pipeline del engagement), estado del engagement, formato de papeles de trabajo, escalamiento y ambigüedad | Pendiente |
 | 2 | `agent/evals.json` — 14 evals en 6 categorías (3 single-skill-clear, 3 multi-skill-composition, 2 escalation-required, 2 near-miss, 2 ambiguous-scope, 2 engagement-state) | Pendiente |
 | 3 | `agent/claude-code/auditor-interno.md` — subagente listo para copiar a `.claude/agents/` (contenido duplicado del system prompt; fuente de verdad: `agent/system-prompt.md`) | Pendiente |
 | 4 | `agent/README.md` — guía del kit: instalación en Claude Desktop (Proyecto + MCP) y Claude Code, cómo correr evals en simulación (PO-5), limitaciones y descargo | Pendiente |
 | 5 | Docs: sección "Agent kit" en README raíz, CHANGELOG `[2.3.0]`, corregir comandos v2.2.0 residuales en PO-1 de CLAUDE.md | Pendiente |
 | 6 | Verificación: JSON válido + 14 evals corridos en simulación sin caer en failure modes + smoke test con el MCP real | Pendiente |
-| 7 | Release: bump 2.2.2 → 2.3.0 (pyproject + server.json ×2), PR a `main`, tag `v2.3.0` (publica automático), GitHub release | Pendiente |
+| 7 | Release: bump 2.2.5 → 2.3.0 (pyproject + server.json ×2), PR a `main`, tag `v2.3.0` (publica automático), GitHub release | Pendiente |
 
 ---
 
 ## Automatización activa
 
-- **Auditoría trimestral de vigencia normativa** (`auditoria-marcos-normativos-trimestral`, creada 2026-07-29): rutina programada de Claude Code (cron `0 13 1 1,4,7,10 *`, 1-ene/abr/jul/oct 8am Bogotá) que investiga en web si los marcos citados en las 20 SKILLs siguen vigentes, y abre un PR con la propuesta solo si detecta gaps sustantivos (nunca mergea, nunca toca `feat/agent-layer`/v2.3.0). Administración: [claude.ai/code/routines](https://claude.ai/code/routines). Próxima corrida: 2026-10-01.
+- **Auditoría trimestral de vigencia normativa** (`auditoria-marcos-normativos-trimestral`, creada 2026-07-29): rutina programada de Claude Code (cron `0 13 1 1,4,7,10 *`, 1-ene/abr/jul/oct 8am Bogotá) que investiga en web si los marcos citados en las 20 SKILLs siguen vigentes, y abre un PR con la propuesta solo si detecta gaps sustantivos (nunca mergea, nunca toca `feat/agent-layer`/v2.3.0). Administración: [claude.ai/code/routines](https://claude.ai/code/routines). Última corrida: 2026-10-01 (PR #6, v2.2.4). Próxima corrida: 2027-01-01.
 
 ## Pendiente de seguridad (requiere acción del owner)
 
@@ -41,7 +41,7 @@ Rama: `feat/agent-layer` · Plan detallado aprobado (sesión Claude Code 2026-07
 
 ## Ideas / deuda técnica (sin versión asignada)
 
-- **Alinear versiones internas divergentes**: el servidor MCP reporta la versión del `catalog.json` (1.1.0), `__init__.py` dice 2.1.0 y el paquete va en 2.2.2. Decidir una sola fuente (probablemente la de pyproject) y derivar las demás.
+- **Alinear versiones internas divergentes**: el servidor MCP reporta la versión del `catalog.json` (1.3.0), `__init__.py` dice 2.1.0 y el paquete va en 2.2.5. Decidir una sola fuente (probablemente la de pyproject) y derivar las demás.
 - **Índice propio del catálogo** (`auditoria_skills_mcp/data/skills/README.md`): opcional; hoy el índice vive en las tablas del README raíz y PO-3 ya apunta ahí.
 - **Implementar flag `--version` en el entrypoint**: el server ignora argumentos; la instrucción se retiró del README (2026-07-07) hasta que exista el flag.
 - **Excluir `CLAUDE.md`/`BACKLOG.md` del sdist** si se prefiere un tarball limpio (`[tool.hatch.build.targets.sdist] exclude`). Hoy viajan como bonus inofensivo.

@@ -22,7 +22,7 @@ Está publicado en PyPI, instalable con `uvx` o `pip`, y registrado en el portal
 │       └── skills/           # 20 SKILL.md (8 procesos + 12 especialidades)
 │           ├── procesos/
 │           └── especialidades/
-├── agent/                    # Capa de agente (PLANEADA, rama feat/agent-layer, rumbo a v2.3.0)
+├── agent/                    # Capa de agente (PLANEADA, rama feat/agent-layer por crear, rumbo a v2.3.0)
 │   ├── system-prompt.md      # System prompt del agente auditor
 │   ├── evals.json            # Set inicial de evals para iteración
 │   └── README.md             # Guía de uso del kit
@@ -104,7 +104,7 @@ Ejemplo: `feat(agent): add system prompt and initial eval set`
 Objetivo: llevar el trabajo actual del agente a `main` y publicar v2.3.0.
 
 Precondiciones:
-- El trabajo del agente vive en rama `feat/agent-layer` (o similar)
+- El trabajo del agente vive en rama `feat/agent-layer` (o similar; hoy no existe, crearla desde `main`)
 - Los evals corren en verde
 - `CHANGELOG.md` refleja los cambios
 
