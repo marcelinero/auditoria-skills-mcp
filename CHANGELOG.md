@@ -10,6 +10,23 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 
 ---
 
+## [2.2.4] — 2026-10-01
+
+### Cambiado
+- Revisión trimestral de vigencia normativa (rutina `auditoria-marcos-normativos-trimestral`), alcance acotado a gaps sustantivos surgidos después de la revisión del 29-jul-2026 (v2.2.3):
+  - `auditoria-inteligencia-artificial`: **OWASP Top 10 for LLM Applications** actualizado a la edición **2026** (publicada el 4-ago-2026): ranking recalibrado combinando voto de la comunidad (~75%) con datos reales de incidentes (~25%); Excessive Agency sube al #3, "System Prompt Leakage" se renombra a "Hidden Context Exposure" (#8).
+  - `auditoria-ambiental`: **ISO 14068-1:2023 reemplazada por ISO 14068:2026** (publicada el 30-sep-2026; cambia numeración de "14068-1" a "14068"). Nota del **GHG Protocol** corregida: el borrador de consulta pública del Scope 3 Standard, antes previsto para mediados de 2026, se pospuso al segundo trimestre de 2027 (estándar consolidado no antes de 2028).
+  - `auditoria-esg-sostenibilidad`: misma corrección de calendario del **GHG Protocol** (Scope 3 Standard), para mantener consistencia con `auditoria-ambiental`.
+  - `auditoria-calidad`: confirmada la **publicación de ISO 9001:2026** el 16-sep-2026 (sexta edición, incorpora la Enmienda 1:2024 sobre cambio climático); periodo de transición desde ISO 9001:2015 hasta el 30-sep-2029.
+- `catalog.json` actualizado a la versión **1.3.0**; entrada de `auditoria-calidad` en `frameworks` actualizada de "ISO 9001" a "ISO 9001:2026".
+
+### Validado sin gap sustantivo confirmado (no se modificó ningún SKILL)
+- Se investigaron además, sin hallar evidencia suficiente de un cambio material posterior al 29-jul-2026 con fuente autoritativa confiable: NIST CSF 2.0, ISO/IEC 27001/27002:2022, CIS Controls v8.1, COBIT 2019, ITAF 5ª ed., NIST SP 800-53, IIA Cybersecurity/Third-Party Topical Requirements, ISO/IEC 42001:2023, NIST AI RMF 1.0 / AI 600-1, MITRE ATLAS, ISSB IFRS S1/S2, GRI Standards, CSRD/ESRS (acto delegado en periodo de escrutinio del Parlamento/Consejo, aún sin entrada en vigor confirmada), ISO 14001/14064/14065/14067, SBTi, EU Taxonomy/CSDDD, SEC Climate Rules, California SB 253/261, ISO 37301, ISO 37001:2025, IIA Anti-Corruption Topical Requirement (sigue en consulta, sin fecha final publicada), UK Corporate Governance Code 2024, GAO Yellow Book, ISO 37000:2021, FATF/GAFI, OECD, Wolfsberg Principles, ACFE, IIA Global Internal Audit Standards 2025 (Topical Requirements), NIA/ISA (IAASB), PCAOB, COSO IC-IF/ERM, ISO 31000.
+- Hallazgos a validar manualmente por el owner en el próximo ciclo (evidencia ambigua o fuentes de calidad mixta, no accionados en este release): posible RFC/sucesor de PCI-DSS v4.0.1; posible nueva versión de COBIT (sin confirmar); estado de adopción de la enmienda a NIS2 Directive; fecha de publicación de la revisión FDIS de ISO/IEC 20000-1; posible actualización de COSO IC-IF 2013 (fuentes de calidad mixta, fecha anterior al corte); fecha final de publicación del acto delegado CSRD/ESRS simplificado en el Diario Oficial de la UE; desenlace del voto de la SEC sobre la rescisión de las Climate Rules.
+- Nota fuera del alcance temporal de esta rutina (cambio ocurrido antes del 29-jul-2026 pero no reflejado en v2.2.3): el "Digital Omnibus" del EU AI Act fue **adoptado formalmente como Reglamento (UE) 2026/1744** (voto del Parlamento 16-jun-2026, adopción del Consejo 29-jun-2026, publicado en el DOUE el 24-jul-2026, en vigor desde el 27-jul-2026) — las fechas de calendario del Anexo III que cita `auditoria-inteligencia-artificial` ya son correctas, pero el texto aún lo describe como "acuerdo provisional... adopción formal esperada". Se recomienda al owner corregir la redacción de estatus (no es un gap de esta rutina trimestral, por lo que no se modificó el SKILL).
+
+---
+
 ## [2.2.3] — 2026-07-29
 
 ### Cambiado
@@ -101,6 +118,8 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y el v
 | **Eliminado** | Funcionalidad o contenido removido |
 | **CI/CD** | Cambios en pipelines de integración/despliegue |
 
+[2.2.4]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.3...v2.2.4
+[2.2.3]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.2...v2.2.3
 [2.2.2]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/marcelinero/auditoria-skills-mcp/compare/v2.1.0...v2.2.0

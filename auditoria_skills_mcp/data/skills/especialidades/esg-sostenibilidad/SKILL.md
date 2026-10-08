@@ -34,7 +34,7 @@ La auditoría ESG evalúa la confiabilidad de las divulgaciones de sostenibilida
 - **AA1000AS** (AccountAbility) — aseguramiento de sostenibilidad.
 
 ### Estándares técnicos
-- **GHG Protocol** — Corporate Standard, Scope 2 Guidance, Scope 3 Standard. Los tres están en revisión: el Phase 1 Progress Update del Scope 3 Standard se publicó el 31 de marzo de 2026, con borrador de consulta pública esperado a mediados de 2026; el Corporate Standard y las guías de Scope 2/3 revisadas no se esperan publicadas antes de finales de 2027 — monitorear cambios pero auditar contra la versión vigente al momento del trabajo.
+- **GHG Protocol** — Corporate Standard, Scope 2 Guidance, Scope 3 Standard. Los tres están en revisión: tras el Phase 1 Progress Update del Scope 3 Standard (31 de marzo de 2026), el GHG Protocol pospuso el calendario — el borrador de consulta pública, antes previsto para mediados de 2026, ahora se espera en el segundo trimestre de 2027, con el estándar consolidado no antes de 2028 — monitorear cambios pero auditar contra la versión vigente al momento del trabajo.
 - **ISO 14064-1, -2, -3** — Cuantificación, proyectos y verificación de GEI.
 - **ISO 14001** — Sistemas de gestión ambiental.
 - **ISO 26000** — Responsabilidad social (guía, no certificable).
